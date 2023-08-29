@@ -1,33 +1,75 @@
 import { useState } from 'react';
 import './App.css';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import CustomForm from './components/CustomForm';
+import TaskList from './components/TaskList';
+import EditForm from './components/EditForm';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [tasks, setTasks] = useState([]);
+	const [editedTask, setEditedTask] = useState(null);
+	const [isEditing, setIsEditing] = useState(false);
+
+	// Add task function
+	const addTask = task => {
+		setTasks(prevState => [...prevState, task]);
+	};
+
+	// Delete task function
+	const deleteTask = id => {
+		setTasks(prevState => prevState.filter(t => t.id !== id));
+	};
+
+	// Update task function
+	const toggleTask = id => {
+		setTasks(prevState =>
+			prevState.map(t => (t.id === id ? { ...t, checked: !t.checked } : t))
+		);
+	};
+
+	const updateTask = task => {
+		setTasks(prevState =>
+			prevState.map(t => (t.id === task.id ? { ...t, name: task.name } : t))
+		);
+		closeEditMode();
+	};
+
+	const closeEditMode = () => {
+		setIsEditing(false);
+	};
+
+	const enterEditMode = task => {
+		setEditedTask(task);
+		setIsEditing(true);
+	};
+
+	const front = isEditing ? 'front' : 'back';
 
 	return (
 		<>
-			<div>
-				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-					<img src={viteLogo} className='logo' alt='Vite logo' />
-				</a>
-				<a href='https://react.dev' target='_blank' rel='noreferrer'>
-					<img src={reactLogo} className='logo react' alt='React logo' />
-				</a>
+			<div className='popup'>
+				{isEditing && (
+					<EditForm
+						updateTask={updateTask}
+						editedTask={editedTask}
+						closeEditMode={closeEditMode}
+					/>
+				)}
 			</div>
-			<h1>Vite + React</h1>
-			<div className='card'>
-				<button onClick={() => setCount(count => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
+			<div id='container' className={front}>
+				<header>
+					<h1>My Task List</h1>
+				</header>
+
+				<CustomForm addTask={addTask} />
+				{tasks && (
+					<TaskList
+						tasks={tasks}
+						deleteTask={deleteTask}
+						toggleTask={toggleTask}
+						enterEditMode={enterEditMode}
+					/>
+				)}
 			</div>
-			<p className='read-the-docs'>
-				Click on the Vite and React logos to learn more
-			</p>
 		</>
 	);
 }

@@ -1,0 +1,46 @@
+.todo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 2em 0;
+    padding: 2em;
+    height: 125px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    padding: 20px;
+    border-radius: 9px;
+    flex: 1;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: 0.1s ease all;
+}
+
+.input:focus {
+    
+    padding: 17px;
+    transition: border 0.1s ease all;
+    border: 3px solid #196BCA;
+}
+
+.label {
+    display: none;
+}
+
+.btn {
+    margin-left: 10px;
+    color: white;
+    box-shadow: rgba(59, 74, 189, 0.474) 0px 7px 29px 0px;
+ background: linear-gradient(to right,#196BCA ,#6433E0);
+}
+
+.btn:hover {
+    background: linear-gradient(to right,#196BCAda ,#196BCAda);}

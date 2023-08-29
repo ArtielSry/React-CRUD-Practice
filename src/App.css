@@ -1,42 +1,43 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.front {
+    opacity: 0.5;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    margin-top: 10em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#container {
+    width: 900px;
+    padding: 3em;
+    text-align: center;
+    margin: auto;
+    font-family: 'DM Sans', sans-serif;
 }
 
-.card {
-  padding: 2em;
+.container h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
 }
 
-.read-the-docs {
-  color: #888;
+ul {
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    border: none;
+    color: white;
 }

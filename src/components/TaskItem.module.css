@@ -1,0 +1,73 @@
+.list {
+  width: 100%;
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 15px 10px;
+    border-radius: 9px;
+    background-color: rgba(255, 255, 255, 0.163);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    -webkit-animation: shadow-drop-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+  }
+  @keyframes shadow-drop-center {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+     opacity: 1;
+    }
+  }
+
+
+.checked {
+  text-decoration: line-through;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.input {
+  margin: 0 1em;
+  width: 25px;
+  height: 25px;
+}
+
+.btns {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btnDelete {
+  margin: 7px;
+  box-shadow: rgba(189, 111, 59, 0.474) 0px 7px 29px 0px;
+  background: linear-gradient(to right,#ca3719 ,#e06d33);
+}
+.btnDelete:hover {
+  background: linear-gradient(to right,#ca3719ad ,#e06d33da);}
+.btnUpdate {
+  margin: 7px;
+  box-shadow: rgba(59, 74, 189, 0.474) 0px 7px 29px 0px;
+ background: linear-gradient(to right,#196BCA ,#6433E0);
+}
+.btnUpdate:hover {
+  background: linear-gradient(to right,#196BCAda ,#196BCAda);}
