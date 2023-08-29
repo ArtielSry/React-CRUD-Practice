@@ -1,8 +1,10 @@
-# React + Vite
+CRUD App with React.js and Vite.
+Hooks: useState()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Download this repo 
+ - npm install
+ - npm run dev
 
-Currently, two official plugins are available:
+![image](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/33cb0d7d-c04a-48ab-93e8-4c3766320827)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/4aa20667-20fb-43a7-a010-2417af3c68f7)
