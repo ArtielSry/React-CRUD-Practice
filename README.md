@@ -5,6 +5,5 @@ Download this repo
  - npm install
  - npm run dev
 
-![image](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/33cb0d7d-c04a-48ab-93e8-4c3766320827)
-![image](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/dc2f1566-78de-4def-bc0e-eeaa3337cdd0)
-
+![605shots_so](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/4aab2835-d6fb-4b48-93e8-89aa7f04efdc)
+![956shots_so](https://github.com/ArtielSry/React-CRUD-Practice/assets/113340763/153e0ccf-61b4-423c-ae3a-d4cfe9a5f6d0)
